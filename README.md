@@ -26,6 +26,10 @@ You can run a development server using following command
 ```bash
 $ bundle install
 
+# Symlink the lib dir to examples/lib, otherwise, server wont be able to serve js file
+$ ln -s $(pwd)/lib/ $(pwd)/examples/
+
+
 $ rackup -p 3000
 
 Puma starting in single mode...
