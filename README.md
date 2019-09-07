@@ -23,31 +23,31 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 ```js
 "Ho! ".x(3)   //=> "Ho! Ho! Ho! "
 
-"hello".capitalize()    #=> "Hello"
+"hello".capitalize()    //=> "Hello"
 
-"abcdef".casecmp("abcde")     #=> 1
-"aBcDeF".casecmp("abcdef")    #=> 0
-"abcdef".casecmp("abcdefg")   #=> -1
-"abcdef".casecmp("ABCDEF")    #=> 0
-
-
-
-"abcdef".casecmp_("abcde")     #=> false
-"aBcDeF".casecmp_("abcdef")    #=> true
-"abcdef".casecmp_("abcdefg")   #=> false
-"abcdef".casecmp_("ABCDEF")    #=> true
+"abcdef".casecmp("abcde")     //=> 1
+"aBcDeF".casecmp("abcdef")    //=> 0
+"abcdef".casecmp("abcdefg")   //=> -1
+"abcdef".casecmp("ABCDEF")    //=> 0
 
 
 
-"hello".center(4)         #=> "hello"
-"hello".center(20)        #=> "       hello        "
-"hello".center(20, '123') #=> "1231231hello12312312"
+"abcdef".casecmp_("abcde")     //=> false
+"aBcDeF".casecmp_("abcdef")    //=> true
+"abcdef".casecmp_("abcdefg")   //=> false
+"abcdef".casecmp_("ABCDEF")    //=> true
 
 
-"abcde".chr()    #=> "a"
 
-"hEllO".downcase()   #=> "hello"
-"hEllO".upcase()   #=> "HELLO"
+"hello".center(4)         //=> "hello"
+"hello".center(20)        //=> "       hello        "
+"hello".center(20, '123') //=> "1231231hello12312312"
+
+
+"abcde".chr()    //=> "a"
+
+"hEllO".downcase()   //=> "hello"
+"hEllO".upcase()   //=> "HELLO"
 
 
 "hello".each_char(function(c){ console.log(c, ' ') })
@@ -55,95 +55,95 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
     h e l l o
 
-"hello".empty_   #=> false
-" ".empty _      #=> false
-"".empty_        #=> true
+"hello".empty_   //=> false
+" ".empty _      //=> false
+"".empty_        //=> true
 
 
-"hello".end_with_("ello")               #=> true
+"hello".end_with_("ello")               //=> true
 
 # returns true if one of the +suffixes+ matches.
-"hello".end_with_("heaven", "ello")     #=> true
-"hello".end_with_("heaven", "paradise") #=> false
+"hello".end_with_("heaven", "ello")     //=> true
+"hello".end_with_("heaven", "paradise") //=> false
 
 
-"hello".gsub(/[aeiou]/, '*')                  #=> "h*ll*"
-"hello".gsub(/([aeiou])/, '<\1>')             #=> "h<e>ll<o>"
+"hello".gsub(/[aeiou]/, '*')                  //=> "h*ll*"
+"hello".gsub(/([aeiou])/, '<\1>')             //=> "h<e>ll<o>"
 
-"hello".include_("lo")    #=> true
-"hello".include_("ol")    #=> false
-"hello".include_('h')     #=> true
+"hello".include_("lo")    //=> true
+"hello".include_("ol")    //=> false
+"hello".include_('h')     //=> true
 
-"hello".index('e')             #=> 1
-"hello".index('lo')            #=> 3
-"hello".index('a')             #=> nil
-"hello".index('e')             #=> 1
+"hello".index('e')             //=> 1
+"hello".index('lo')            //=> 3
+"hello".index('a')             //=> nil
+"hello".index('e')             //=> 1
 
-"hello\nworld\n".lines()             #=> ["hello\n", "world\n"]
-"hello  world".lines(' ')           #=> ["hello ", " ", "world"]
-"hello\nworld\n".lines() #=> ["hello", "world"]
+"hello\nworld\n".lines()             //=> ["hello\n", "world\n"]
+"hello  world".lines(' ')           //=> ["hello ", " ", "world"]
+"hello\nworld\n".lines() //=> ["hello", "world"]
 
-"  hello  ".lstrip()   #=> "hello  "
-"hello".lstrip()       #=> "hello"
+"  hello  ".lstrip()   //=> "hello  "
+"hello".lstrip()       //=> "hello"
 
-"  hello  ".rstrip()   #=> "  hello"
-"hello".rstrip()       #=> "hello"
+"  hello  ".rstrip()   //=> "  hello"
+"hello".rstrip()       //=> "hello"
 
 
-"Ruby".match_(/R.../)    #=> true
-"Ruby".match_(/R.../, 1) #=> false
-"Ruby".match_(/P.../)    #=> false
+"Ruby".match_(/R.../)    //=> true
+"Ruby".match_(/R.../, 1) //=> false
+"Ruby".match_(/P.../)    //=> false
 
-"abcd".succ()        #=> "abce"
-"THX1138".succ()     #=> "THX1139"
+"abcd".succ()        //=> "abce"
+"THX1138".succ()     //=> "THX1139"
 "<<koala>>".succ()
 
-"abcd".next()        #=> "abce"
-"THX1138".next()     #=> "THX1139"
-"<<koala>>".next()   #=> "<<koalb>>"
+"abcd".next()        //=> "abce"
+"THX1138".next()     //=> "THX1139"
+"<<koala>>".next()   //=> "<<koalb>>"
 
-"a".ord() #=> 49
+"a".ord() //=> 49
 
 // Non mutative
 a = "!"
-a.prepend("hello ", "world") #=> "hello world!"
+a.prepend("hello ", "world") //=> "hello world!"
 
-"stressed".reverse()   #=> "desserts"
+"stressed".reverse()   //=> "desserts"
 
 a = "cruel world"
-a.scan(/\w+/)        #=> ["cruel", "world"]
-a.scan(/.../)        #=> ["cru", "el ", "wor"]
-a.scan(/(...)/)      #=> [["cru"], ["el "], ["wor"]]
-a.scan(/(..)(..)/)   #=> [["cr", "ue"], ["l ", "wo"]]
+a.scan(/\w+/)        //=> ["cruel", "world"]
+a.scan(/.../)        //=> ["cru", "el ", "wor"]
+a.scan(/(...)/)      //=> [["cru"], ["el "], ["wor"]]
+a.scan(/(..)(..)/)   //=> [["cr", "ue"], ["l ", "wo"]]
 
-"cruel world".size()  #=> 11
+"cruel world".size()  //=> 11
 
 
-"hello".start_with_("hell")               #=> true
-"hello".start_with_(/H/i)                 #=> true
+"hello".start_with_("hell")               //=> true
+"hello".start_with_(/H/i)                 //=> true
 
 # returns true if one of the prefixes matches.
-"hello".start_with_"heaven", "hell")     #=> true
-"hello".start_with_("heaven", "paradise") #=> false
+"hello".start_with_"heaven", "hell")     //=> true
+"hello".start_with_("heaven", "paradise") //=> false
 
-"hello".sub(/[aeiou]/, '*')                  #=> "h*llo"
+"hello".sub(/[aeiou]/, '*')                  //=> "h*llo"
 
-"Hello".swapcase()          #=> "hELLO"
-"cYbEr_PuNk11".swapcase()   #=> "CyBeR_pUnK11"
+"Hello".swapcase()          //=> "hELLO"
+"cYbEr_PuNk11".swapcase()   //=> "CyBeR_pUnK11"
 
-"123.45e1".to_f()        #=> 1234.5
-"45.67 degrees".to_f()   #=> 45.67
-"thx1138".to_f()         #=> 0.0
+"123.45e1".to_f()        //=> 1234.5
+"45.67 degrees".to_f()   //=> 45.67
+"thx1138".to_f()         //=> 0.0
 
-"12345".to_i             #=> 12345
-"99 red balloons".to_i   #=> 99
-"0a".to_i                #=> 0
-"0a".to_i(16)            #=> 10
-"hello".to_i             #=> 0
-"1100101".to_i(2)        #=> 101
-"1100101".to_i(8)        #=> 294977
-"1100101".to_i(10)       #=> 1100101
-"1100101".to_i(16)       #=> 17826049
+"12345".to_i             //=> 12345
+"99 red balloons".to_i   //=> 99
+"0a".to_i                //=> 0
+"0a".to_i(16)            //=> 10
+"hello".to_i             //=> 0
+"1100101".to_i(2)        //=> 101
+"1100101".to_i(8)        //=> 294977
+"1100101".to_i(10)       //=> 1100101
+"1100101".to_i(16)       //=> 17826049
 
 ```
 
