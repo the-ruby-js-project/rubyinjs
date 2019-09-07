@@ -9,10 +9,10 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 <script src="https://raw.githubusercontent.com/the-ruby-js-project/rubyinjs/master/lib/ruby.js"></script>
 
 <script>
-    "1234".to_i() // 1234
-    "1234.35".to_f() // 1234.35
-    "shiva bhusal".start_with_('shi') // true
-    "shiva bhusal".start_with_('hi') // false
+    "1234".to_i()                       // 1234
+    "1234.35".to_f()                    // 1234.35
+    "shiva bhusal".start_with_('shi')   // true
+    "shiva bhusal".start_with_('hi')    // false
 </script>
 
 ```
@@ -23,21 +23,21 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 #### *(n)
 ```js
-"Ho! ".x(3)   //=> "Ho! Ho! Ho! "
+"Ho! ".x(3)                             //=> "Ho! Ho! Ho! "
 ```
 
 #### capitalize
 ```js
-"hello".capitalize()    //=> "Hello"
+"hello".capitalize()                    //=> "Hello"
 ```
 
 #### casecmp?(str)
 
 ```js
-"abcdef".casecmp_("abcde")     //=> false
-"aBcDeF".casecmp_("abcdef")    //=> true
-"abcdef".casecmp_("abcdefg")   //=> false
-"abcdef".casecmp_("ABCDEF")    //=> true
+"abcdef".casecmp_("abcde")              //=> false
+"aBcDeF".casecmp_("abcdef")             //=> true
+"abcdef".casecmp_("abcdefg")            //=> false
+"abcdef".casecmp_("ABCDEF")             //=> true
 
 
 ```
@@ -46,28 +46,28 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 ```js
 
-"hello".center(4)         //=> "hello"
-"hello".center(20)        //=> "       hello        "
-"hello".center(20, '123') //=> "1231231hello12312312"
+"hello".center(4)                       //=> "hello"
+"hello".center(20)                      //=> "       hello        "
+"hello".center(20, '123')               //=> "1231231hello12312312"
 ```
 
 #### chr
 
 ```js
-"abcde".chr()    //=> "a"
+"abcde".chr()                           //=> "a"
 ```
 
 #### downcase
 
 ```js
 
-"hEllO".downcase()   //=> "hello"
+"hEllO".downcase()                      //=> "hello"
 ```
 
 #### upcase
 
 ```js
-"hEllO".upcase()   //=> "HELLO"
+"hEllO".upcase()                        //=> "HELLO"
 ```
 
 #### each_char {}
@@ -85,9 +85,9 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 ```js
 
-"hello".empty_   //=> false
-" ".empty _      //=> false
-"".empty_        //=> true
+"hello".empty_                          //=> false
+" ".empty _                             //=> false
+"".empty_                               //=> true
 ```
 
 #### end_with?(str)
@@ -107,52 +107,52 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 ```js
 
 
-"hello".gsub(/[aeiou]/, '*')                  //=> "h*ll*"
-"hello".gsub(/([aeiou])/, '<\1>')             //=> "h<e>ll<o>"
+"hello".gsub(/[aeiou]/, '*')            //=> "h*ll*"
+"hello".gsub(/([aeiou])/, '<\1>')       //=> "h<e>ll<o>"
 ```
 
 #### include?(str)
 
 ```js
 
-"hello".include_("lo")    //=> true
-"hello".include_("ol")    //=> false
-"hello".include_('h')     //=> true
+"hello".include_("lo")                  //=> true
+"hello".include_("ol")                  //=> false
+"hello".include_('h')                   //=> true
 ```
 
 #### index
 
 ```js
 
-"hello".index('e')             //=> 1
-"hello".index('lo')            //=> 3
-"hello".index('a')             //=> nil
-"hello".index('e')             //=> 1
+"hello".index('e')                      //=> 1
+"hello".index('lo')                     //=> 3
+"hello".index('a')                      //=> nil
+"hello".index('e')                      //=> 1
 ```
 
 #### lines
 
 ```js
 
-"hello\nworld\n".lines()             //=> ["hello\n", "world\n"]
-"hello  world".lines(' ')           //=> ["hello ", " ", "world"]
-"hello\nworld\n".lines() //=> ["hello", "world"]
+"hello\nworld\n".lines()                //=> ["hello\n", "world\n"]
+"hello  world".lines(' ')               //=> ["hello ", " ", "world"]
+"hello\nworld\n".lines()                //=> ["hello", "world"]
 ```
 
 #### lstrip
 
 ```js
 
-"  hello  ".lstrip()   //=> "hello  "
-"hello".lstrip()       //=> "hello"
+"  hello  ".lstrip()                    //=> "hello  "
+"hello".lstrip()                        //=> "hello"
 ```
 
 #### rstrip
 
 ```js
 
-"  hello  ".rstrip()   //=> "  hello"
-"hello".rstrip()       //=> "hello"
+"  hello  ".rstrip()                    //=> "  hello"
+"hello".rstrip()                        //=> "hello"
 ```
 
 #### match?(regex)
@@ -160,17 +160,17 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 ```js
 
 
-"Ruby".match_(/R.../)    //=> true
-"Ruby".match_(/R.../, 1) //=> false
-"Ruby".match_(/P.../)    //=> false
+"Ruby".match_(/R.../)                   //=> true
+"Ruby".match_(/R.../, 1)                //=> false
+"Ruby".match_(/P.../)                   //=> false
 ```
 
 #### succ
 
 ```js
 
-"abcd".succ()        //=> "abce"
-"THX1138".succ()     //=> "THX1139"
+"abcd".succ()                           //=> "abce"
+"THX1138".succ()                        //=> "THX1139"
 "<<koala>>".succ()
 ```
 
@@ -178,16 +178,16 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 ```js
 
-"abcd".next()        //=> "abce"
-"THX1138".next()     //=> "THX1139"
-"<<koala>>".next()   //=> "<<koalb>>"
+"abcd".next()                           //=> "abce"
+"THX1138".next()                        //=> "THX1139"
+"<<koala>>".next()                      //=> "<<koalb>>"
 ```
 
 #### ord
 
 ```js
 
-"a".ord() //=> 49
+"a".ord()                               //=> 49
 ```
 
 #### prepend
@@ -196,15 +196,15 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 // Non mutative
 a = "!"
-a.prepend("hello ", "world") //=> "hello world!"
-a.prepend("hello ", "world", 'shiva') //=> "hello world shiva!"
+a.prepend("hello ", "world")            //=> "hello world!"
+a.prepend("hello ", "world", 'shiva')   //=> "hello world shiva!"
 ```
 
 #### reverse
 
 ```js
 
-"stressed".reverse()   //=> "desserts"
+"stressed".reverse()                    //=> "desserts"
 ```
 
 #### scan(pattern)
@@ -212,10 +212,10 @@ a.prepend("hello ", "world", 'shiva') //=> "hello world shiva!"
 ```js
 
 a = "cruel world"
-a.scan(/\w+/)        //=> ["cruel", "world"]
-a.scan(/.../)        //=> ["cru", "el ", "wor"]
-a.scan(/(...)/)      //=> [["cru"], ["el "], ["wor"]]
-a.scan(/(..)(..)/)   //=> [["cr", "ue"], ["l ", "wo"]]
+a.scan(/\w+/)                           //=> ["cruel", "world"]
+a.scan(/.../)                           //=> ["cru", "el ", "wor"]
+a.scan(/(...)/)                         //=> [["cru"], ["el "], ["wor"]]
+a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 ```
 
 #### size
@@ -239,39 +239,39 @@ a.scan(/(..)(..)/)   //=> [["cr", "ue"], ["l ", "wo"]]
 
 ```js
 
-"hello".sub(/[aeiou]/, '*')                  //=> "h*llo"
+"hello".sub(/[aeiou]/, '*')             //=> "h*llo"
 ```
 
 #### swapcase
 
 ```js
 
-"Hello".swapcase()          //=> "hELLO"
-"cYbEr_PuNk11".swapcase()   //=> "CyBeR_pUnK11"
+"Hello".swapcase()                      //=> "hELLO"
+"cYbEr_PuNk11".swapcase()               //=> "CyBeR_pUnK11"
 ```
 
 #### to_f
 
 ```js
 
-"123.45e1".to_f()        //=> 1234.5
-"45.67 degrees".to_f()   //=> 45.67
-"thx1138".to_f()         //=> 0.0
+"123.45e1".to_f()                       //=> 1234.5
+"45.67 degrees".to_f()                  //=> 45.67
+"thx1138".to_f()                        //=> 0.0
 ```
 
 #### to_i
 
 ```js
 
-"12345".to_i()             //=> 12345
-"99 red balloons".to_i()   //=> 99
-"0a".to_i()                //=> 0
-"0a".to_i(16)            //=> 10
-"hello".to_i()             //=> 0
-"1100101".to_i(2)        //=> 101
-"1100101".to_i(8)        //=> 294977
-"1100101".to_i(10)       //=> 1100101
-"1100101".to_i(16)       //=> 17826049
+"12345".to_i()                          //=> 12345
+"99 red balloons".to_i()                //=> 99
+"0a".to_i()                             //=> 0
+"0a".to_i(16)                           //=> 10
+"hello".to_i()                          //=> 0
+"1100101".to_i(2)                       //=> 101
+"1100101".to_i(8)                       //=> 294977
+"1100101".to_i(10)                      //=> 1100101
+"1100101".to_i(16)                      //=> 17826049
 
 ```
 
