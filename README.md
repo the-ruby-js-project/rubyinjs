@@ -287,6 +287,97 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 
 ```
 
+### Array Methods
+
+#### at(index)
+
+```js
+[1, 2, 3, 4, 5, 6].at(1)  #=> 2
+```
+
+
+#### fetch(index, fallback)
+
+```js
+
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.fetch(100)                                  #=> IndexError: index 100 outside of array bounds: -6...6
+arr.fetch(100, "oops")                          #=> "oops"
+ 
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
+
+#### take(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.take(1)                             #=> ['a']
+arr.take(2)                          #=> ['a', 'b']
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
+
+#### first(count)
+
+```js
+arr = ['a', 'b', 'c', 'd', 'e', 'f']
+arr.first()                                     #=> 'a'
+arr.first(2)                                    #=> ['a', 'b']
+```
+
 ## Development
 ### Requirements
 You need to have a working `Ruby` language installed in your system.
