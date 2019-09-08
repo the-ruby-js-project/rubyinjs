@@ -30,8 +30,7 @@ gem 'rubyinjs'
 //= require 'rubyinjs'
 ```
 
-## Methods supported
-### in String Object
+## String methods
 
 #### *(n)
 ```js
@@ -287,12 +286,14 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 
 ```
 
-### Array Methods
+---
+
+## Array Methods
 
 #### at(index)
 
 ```js
-[1, 2, 3, 4, 5, 6].at(1)  #=> 2
+[1, 2, 3, 4, 5, 6].at(1)  //=> 2
 ```
 
 
@@ -301,18 +302,9 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 ```js
 
 arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.fetch(100)                                  #=> IndexError: index 100 outside of array bounds: -6...6
-arr.fetch(100, "oops")                          #=> "oops"
+arr.fetch(100)                          //=> IndexError: index 100 outside of array bounds: -6...6
+arr.fetch(100, "oops")                  //=> "oops"
  
-```
-
-
-#### first(count)
-
-```js
-arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
 ```
 
 
@@ -320,8 +312,8 @@ arr.first(2)                                    #=> ['a', 'b']
 
 ```js
 arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.take(1)                             #=> ['a']
-arr.take(2)                          #=> ['a', 'b']
+arr.take(1)                             //=> ['a']
+arr.take(2)                             //=> ['a', 'b']
 ```
 
 
@@ -329,55 +321,251 @@ arr.take(2)                          #=> ['a', 'b']
 
 ```js
 arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
+arr.first()                             //=> 'a'
+arr.first(2)                            //=> ['a', 'b']
 ```
 
 
-#### first(count)
+#### last(count)
 
 ```js
 arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
+arr.last                                //=> 'f'
+arr.last(2)                             //=> ['e', 'f']
 ```
 
 
-#### first(count)
+#### count
 
 ```js
-arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
+browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
+browsers.length //=> 5
+browsers.count //=> 5
 ```
 
 
-#### first(count)
+#### include?(item)
 
 ```js
-arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
+
+browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
+browsers.include_('Konqueror')          //=> false
 ```
 
 
-#### first(count)
+#### empty?
 
 ```js
-arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
+browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
+browsers.empty_ //=> false
 ```
 
 
-#### first(count)
+#### insert(index, item)
 
 ```js
-arr = ['a', 'b', 'c', 'd', 'e', 'f']
-arr.first()                                     #=> 'a'
-arr.first(2)                                    #=> ['a', 'b']
+a = %w{ a b c d }
+a.insert(2, 99)                         //=> ["a", "b", 99, "c", "d"]
+a.insert(-2, 1, 2, 3)                   //=> ["a", "b", 99, "c", 1, 2, 3, "d"]
 ```
 
+
+#### count
+
+```js
+[ 1, 2, 3, 4, 5 ].size()                //=> 5
+```
+
+#### collect
+
+```js
+ 1, 2, 3, 4, 5 ].collect {}             //=> 5
+```
+
+#### pop
+
+```js
+a = [ "a", "b", "c", "d" ]
+a.pop                                   //=> "d"
+a.pop(2)                                //=> ["b", "c"]
+a                                       //=> ["a"]
+```
+
+#### & operation
+
+```js
+[ 1, 1, 3, 5 ].and([ 1, 2, 3 ])         //=> [ 1, 3 ]
+```
+
+#### * 
+
+```js
+[ 1, 2, 3 ].x(3)                        //=> [ 1, 2, 3, 1, 2, 3, 1, 2, 3 ]
+[ 1, 2, 3 ].x(",")                      //=> "1,2,3"
+```
+
+#### +
+
+```js
+Ruby [ 1, 2, 3 ] + [ 4, 5 ]             //=> [ 1, 2, 3, 4, 5 ]
+JS [ 1, 2, 3 ].plus([ 4, 5 ])           //=> [ 1, 2, 3, 4, 5 ]
+```
+
+#### -
+
+```js
+Ruby [ 1, 1, 2, 2, 3, 3, 4, 5 ] - [ 1, 2, 4 ]       //=>  [ 3, 3, 5 ]
+JS [ 1, 1, 2, 2, 3, 3, 4, 5 ].minus([ 1, 2, 4 ])    //=>  [ 3, 3, 5 ]
+```
+
+#### assoc
+
+```js
+bs1 = [ "colors", "red", "blue", "green" ]
+ s2 = [ "letters", "a", "b", "c" ]
+ s3 = "foo"
+ a  = [ s1, s2, s3 ]
+ a.assoc("letters")                     //=> [ "letters", "a", "b", "c" ]
+ a.assoc("foo")                         //=> nil
+```
+
+#### count
+
+```js
+browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
+browsers.length                         //=> 5
+browsers.count                          //=> 5
+```
+
+#### rassoc
+
+```js
+a = [ [ 1, "one"], [2, "two"], [3, "three"], ["ii", "two"] ]
+a.rassoc("two")                         //=> [2, "two"]
+a.rassoc("four")                        //=> nil
+```
+
+#### at
+
+```js
+a = [ "a", "b", "c", "d", "e" ]
+a.at(0)                                 //=> "a"
+a.at(-1)                                //=> "e"
+```
+
+#### clear
+
+```js
+a = [ "a", "b", "c", "d", "e" ]
+a.clear                                 //=> [ ]
+```
+
+#### compact
+
+```js
+[ "a", nil, "b", nil, "c", nil ].compact
+                                        //=> [ "a", "b", "c" ]
+js:
+[1, 2, 3, null, undefined, true, false, 4, 5].compact() //=> [1, 2, 3, true, false, 4, 5]
+```
+
+#### cycle
+
+```js
+a = ["a", "b", "c"]
+a.cycle {|x| puts x }                   // print, a, b, c, a, b, c,.. forever.
+a.cycle(2) {|x| puts x }                // print, a, b, c, a, b, c.
+```
+
+#### delete
+
+```js
+a = [ "a", "b", "b", "b", "c" ]
+a.delete("b")                           //=> "b"
+a                                       //=> ["a", "c"]
+a.delete("z")                           //=> nil
+a.delete("z") { "not found" }           //=> "not found"
+```
+
+#### delete_at(index)
+
+```js
+a = %w( ant bat cat dog )
+a.delete_at(2)                          //=> "cat"
+a                                       //=> ["ant", "bat", "dog"]
+a.delete_at(99)                         //=> nil
+```
+
+#### keep_if [destructive]
+
+```js
+a = [ "a", "b", "c", "d", "e"]
+a.keep_if((v)=>v.match(/[aeiou]/))      //=> ["a", "e"]
+```
+
+
+#### reject
+
+```js
+a = [ "a", "b", "c", "d", "e"]
+a.reject((v)=>v.match(/[aeiou]/))       //=> ["b", "c", "d"]
+```
+
+
+#### select
+
+```js
+a = [ "a", "b", "c", "d", "e"]
+a.select((v)=>v.match(/[aeiou]/))       //=> ["a", "e"]
+```
+
+
+#### reverse_each
+
+```js
+a = [ "a", "b", "c" ]
+a.reverse_each {|x| print x, " " }
+produces:
+
+c b a
+```
+
+#### sample
+
+```js
+a = [ "a", "b", "c" ]
+a.sample()                              //=> 'a'
+a.sample()                              //=> 'b'
+a.sample()                              //=> 'a'
+a.sample(2)                             //=> ['a', 'c']
+```
+
+#### transpose
+
+```js
+a = [[1,2], [3,4], [5,6]]
+a.transpose()                           //=> [[1, 3, 5], [2, 4, 6]]
+```
+
+#### uniq
+
+```js
+a = [ "a", "a", "b", "b", "c" ]
+a.uniq()                                //=> ["a", "b", "c"]
+```
+
+#### each
+
+```js
+a = [ "a", "a", "b", "b", "c" ]
+a.each((x)=>console.log(x))
+Output:
+a
+a
+b
+b
+c
+```
 ## Development
 ### Requirements
 You need to have a working `Ruby` language installed in your system.
