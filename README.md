@@ -17,6 +17,18 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 ```
 
+### in Rails Application
+
+```Gemfile
+gem 'rubyinjs'
+
+```
+
+```js
+// application.js
+
+//= require 'rubyinjs'
+```
 
 ## Methods supported
 ### in String Object
