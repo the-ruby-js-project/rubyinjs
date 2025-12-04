@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
-gem 'puma'
-gem 'slim'
+gem 'kramdown'
+gem 'kramdown-parser-gfm'
+gem 'rake'
 gem 'pry'
+gem 'rouge'
