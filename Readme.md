@@ -1,6 +1,12 @@
-# rubyinjs
-![](logo.png)
+# Ruby In JS Project
+
+![example workflow](https://github.com/the-ruby-js-project/rubyinjs/actions/workflows/site-builder.yml/badge.svg)
+
+<img src="logo.png" alt="Rubyinjs Logo" width="200"/>
+
 Enjoy Ruby like functions in jS Objects; make your life easier
+
+---
 
 ## Usage
 **Note**: since, no `?` symbol is supported by `Javascript` therefore for 
@@ -20,13 +26,13 @@ methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
 ### in Rails Application
 
-```Gemfile
+```ruby
+# Gemfile
 gem 'rubyinjs'
-
 ```
 
 ```js
-// application.js
+// in application.js
 
 //= require 'rubyinjs'
 ```
@@ -50,8 +56,6 @@ gem 'rubyinjs'
 "aBcDeF".casecmp_("abcdef")             //=> true
 "abcdef".casecmp_("abcdefg")            //=> false
 "abcdef".casecmp_("ABCDEF")             //=> true
-
-
 ```
 
 #### center
@@ -85,8 +89,6 @@ gem 'rubyinjs'
 #### each_char {}
 
 ```js
-
-
 "hello".each_char(function(c){ console.log(c, ' ') })
     produces:
 
@@ -96,7 +98,6 @@ gem 'rubyinjs'
 #### empty?
 
 ```js
-
 "hello".empty_                          //=> false
 " ".empty _                             //=> false
 "".empty_                               //=> true
@@ -105,8 +106,6 @@ gem 'rubyinjs'
 #### end_with?(str)
 
 ```js
-
-
 "hello".end_with_("ello")               //=> true
 
 # returns true if one of the +suffixes+ matches.
@@ -117,8 +116,6 @@ gem 'rubyinjs'
 #### gsub(patern, replacement_str)
 
 ```js
-
-
 "hello".gsub(/[aeiou]/, '*')            //=> "h*ll*"
 "hello".gsub(/([aeiou])/, '<\1>')       //=> "h<e>ll<o>"
 ```
@@ -126,7 +123,6 @@ gem 'rubyinjs'
 #### include?(str)
 
 ```js
-
 "hello".include_("lo")                  //=> true
 "hello".include_("ol")                  //=> false
 "hello".include_('h')                   //=> true
@@ -135,7 +131,6 @@ gem 'rubyinjs'
 #### index
 
 ```js
-
 "hello".index('e')                      //=> 1
 "hello".index('lo')                     //=> 3
 "hello".index('a')                      //=> nil
@@ -145,7 +140,6 @@ gem 'rubyinjs'
 #### lines
 
 ```js
-
 "hello\nworld\n".lines()                //=> ["hello\n", "world\n"]
 "hello  world".lines(' ')               //=> ["hello ", " ", "world"]
 "hello\nworld\n".lines()                //=> ["hello", "world"]
@@ -154,7 +148,6 @@ gem 'rubyinjs'
 #### lstrip
 
 ```js
-
 "  hello  ".lstrip()                    //=> "hello  "
 "hello".lstrip()                        //=> "hello"
 ```
@@ -162,7 +155,6 @@ gem 'rubyinjs'
 #### rstrip
 
 ```js
-
 "  hello  ".rstrip()                    //=> "  hello"
 "hello".rstrip()                        //=> "hello"
 ```
@@ -170,8 +162,6 @@ gem 'rubyinjs'
 #### match?(regex)
 
 ```js
-
-
 "Ruby".match_(/R.../)                   //=> true
 "Ruby".match_(/R.../, 1)                //=> false
 "Ruby".match_(/P.../)                   //=> false
@@ -180,7 +170,6 @@ gem 'rubyinjs'
 #### succ
 
 ```js
-
 "abcd".succ()                           //=> "abce"
 "THX1138".succ()                        //=> "THX1139"
 "<<koala>>".succ()
@@ -189,7 +178,6 @@ gem 'rubyinjs'
 #### next
 
 ```js
-
 "abcd".next()                           //=> "abce"
 "THX1138".next()                        //=> "THX1139"
 "<<koala>>".next()                      //=> "<<koalb>>"
@@ -198,14 +186,12 @@ gem 'rubyinjs'
 #### ord
 
 ```js
-
 "a".ord()                               //=> 49
 ```
 
 #### prepend
 
 ```js
-
 // Non mutative
 a = "!"
 a.prepend("hello ", "world")            //=> "hello world!"
@@ -215,14 +201,12 @@ a.prepend("hello ", "world", 'shiva')   //=> "hello world shiva!"
 #### reverse
 
 ```js
-
 "stressed".reverse()                    //=> "desserts"
 ```
 
 #### scan(pattern)
 
 ```js
-
 a = "cruel world"
 a.scan(/\w+/)                           //=> ["cruel", "world"]
 a.scan(/.../)                           //=> ["cru", "el ", "wor"]
@@ -233,7 +217,6 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 #### size
 
 ```js
-
 "cruel world".size()  //=> 11
 ```
 
@@ -250,14 +233,12 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 #### sub(pattern)
 
 ```js
-
 "hello".sub(/[aeiou]/, '*')             //=> "h*llo"
 ```
 
 #### swapcase
 
 ```js
-
 "Hello".swapcase()                      //=> "hELLO"
 "cYbEr_PuNk11".swapcase()               //=> "CyBeR_pUnK11"
 ```
@@ -265,7 +246,6 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 #### to_f
 
 ```js
-
 "123.45e1".to_f()                       //=> 1234.5
 "45.67 degrees".to_f()                  //=> 45.67
 "thx1138".to_f()                        //=> 0.0
@@ -274,7 +254,6 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 #### to_i
 
 ```js
-
 "12345".to_i()                          //=> 12345
 "99 red balloons".to_i()                //=> 99
 "0a".to_i()                             //=> 0
@@ -284,7 +263,6 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 "1100101".to_i(8)                       //=> 294977
 "1100101".to_i(10)                      //=> 1100101
 "1100101".to_i(16)                      //=> 17826049
-
 ```
 
 ---
@@ -301,7 +279,6 @@ a.scan(/(..)(..)/)                      //=> [["cr", "ue"], ["l ", "wo"]]
 #### fetch(index, fallback)
 
 ```js
-
 arr = ['a', 'b', 'c', 'd', 'e', 'f']
 arr.fetch(100)                          //=> IndexError: index 100 outside of array bounds: -6...6
 arr.fetch(100, "oops")                  //=> "oops"

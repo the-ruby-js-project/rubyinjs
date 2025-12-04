@@ -33,6 +33,12 @@ task :compile_readme do
 
   puts "Compiled #{input_file} to #{output_file}"
 
-  # copy file lib/ruby.js to _site/ruby.js
-  FileUtils.cp('lib/ruby.js', '_site/ruby.js')
+  # copy a list of files to _site
+  assets = [
+    'logo.png',
+    'lib/ruby.js'
+  ]
+  assets.each do |asset|
+    FileUtils.cp(asset, '_site/')
+  end
 end
