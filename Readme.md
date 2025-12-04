@@ -8,20 +8,24 @@ Enjoy Ruby like functions in jS Objects; make your life easier
 
 ---
 
-## Usage
+## Basic Usage
+
 **Note**: since, no `?` symbol is supported by `Javascript` therefore for 
 methods like `match?` or `include?`, `empty?` use `_` instead of `?`.
 
+After deployment the latest version of the `ruby.js` library will be available at
+[`https://the-ruby-js-project.github.io/rubyinjs/ruby.js`](https://the-ruby-js-project.github.io/rubyinjs/ruby.js)
+
+
 ```html
-<script src="https://raw.githubusercontent.com/the-ruby-js-project/rubyinjs/master/lib/ruby.js"></script>
+<script src="https://the-ruby-js-project.github.io/rubyinjs/ruby.js"></script>
 
 <script>
-    "1234".to_i()                       // 1234
-    "1234.35".to_f()                    // 1234.35
-    "shiva bhusal".start_with_('shi')   // true
-    "shiva bhusal".start_with_('hi')    // false
+    console.log("1234".to_i())                       // 1234
+    console.log("1234.35".to_f())                    // 1234.35
+    console.log("shiva bhusal".start_with_('shi'))   // true
+    console.log("shiva bhusal".start_with_('hi'))    // false
 </script>
-
 ```
 
 ### in Rails Application
@@ -545,13 +549,18 @@ b
 c
 ```
 ## Development
+
 ### Requirements
+
 You need to have a working `Ruby` language installed in your system.
+
 ```bash
 $ which ruby
 /Users/john/.rvm/rubies/ruby-2.6.3/bin/ruby
 ```
+
 #### Install Ruby
+
 ##### Mac
 ```ruby
 brew install ruby
@@ -583,3 +592,36 @@ Puma starting in single mode...
 Use Ctrl-C to stop
 
 ```
+## Development
+To contribute to the project, fork the repo and clone it locally.
+
+Then start a rack server using following command
+
+```bash
+$ bundle install
+$ rackup -p 9292
+```
+This will start a server at `http://localhost:9292`
+
+Now in console you can test the methods you modify in `ruby.js` file
+
+
+## Site Builder
+We use a rake task to build the site. To build the site, run following command
+
+```bash
+$ bundle exec rake
+```
+
+## Deployment
+The site is deployed using GitHub pages. To deploy the site just push the changes to `master` branch
+and GitHub action will take care of the rest.
+
+See the workflow file [.github/workflows/site-builder.yml](.github/workflows/site-builder.yml)
+
+After deployment the latest version of the `ruby.js` library will be available at
+
+[`https://the-ruby-js-project.github.io/rubyinjs/ruby.js`](https://the-ruby-js-project.github.io/rubyinjs/ruby.js)
+
+# Author
+Shiva Bhusal - [GitHub](https://github.com/shivabhusal)

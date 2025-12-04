@@ -1,16 +1,26 @@
 html
   head
-    title Example to use RubyInJS projectt
-    script src="/lib/ruby.js" type="text/javascript"
+    title Example to use RubyInJS project
+    script src="/js/ruby.js" type="text/javascript"
+    link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"
+
   body
-    h1 Here are some usages
+    .container
+      h1 Here are some usages
 
-    h2 String Methods
-    code
-      | "hello world".count
-      br
-      | // returns 11
-
+      h2 String Methods
+      code style="background-color: #f0f0f0; padding: 15px; display: block; margin-bottom: 10px;"
+        | "hello world".count
+        br
+        | // returns 11
+      h2 Please open the browser console to see the results
   javascript:
+    console.log("Welcome To RubyInJS Project!")
+    console.log("Try some examples like below:")
+    console.log('"hello world".size => ' + "hello world".size())  // returns 11
+    console.log('"hello world".upcase => ' + "hello world".upcase()) // returns "HELLO WORLD"
+    console.log('"hello world".downcase => ' + "HELLO WORLD".downcase()) // returns "hello world"
+    console.log('"hello world".capitalize => ' + "hello world".capitalize()) // returns "Hello world"
+    console.log('"hello world".include_("lo") => ' + "hello world".include_("lo")) // returns true
 
 
