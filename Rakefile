@@ -2,10 +2,13 @@ require 'pry'
 task :default => :compile_readme
 task :compile_readme do
   require 'kramdown'
-  require 'kramdown-parser-gfm'
 
   input_file = 'Readme.md'
-  output_file = 'docs/Readme.html'
+  output_file = '_site/index.html'
+
+  unless Dir.exist?('_site')
+    Dir.mkdir('_site')
+  end
 
   markdown = File.read(input_file)
   html = Kramdown::Document.new(markdown, input: 'GFM', syntax_highlighter: 'rouge').to_html
@@ -29,4 +32,7 @@ task :compile_readme do
   end
 
   puts "Compiled #{input_file} to #{output_file}"
+
+  # copy file lib/ruby.js to _site/ruby.js
+  FileUtils.cp('lib/ruby.js', '_site/ruby.js')
 end
