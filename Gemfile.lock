@@ -10,7 +10,7 @@ GEM
     pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    rack (3.2.4)
+    rack (3.2.6)
     rake (13.3.1)
     rexml (3.4.4)
     rouge (4.6.1)
